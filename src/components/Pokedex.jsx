@@ -49,7 +49,7 @@ const Pokedex = () => {
   return (
     <div className='pokedex'>
       <div className='title'>
-        <img src='src\assets\pokedexImg.9b8fddba.png' alt="" />
+        <img src='src\assets\images\pokedexImg.9b8fddba.png' alt="" />
       </div>
       <div className='welcome'>
         <h1>welcome!!  {userName}</h1>
