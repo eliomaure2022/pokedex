@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Navigate, useNavigate } from 'react-router-dom';
 import PokemonCard from './PokemonCard';
+import pokemon from '../assets/images/pokemon.png'
 
 const Pokedex = () => {
 
@@ -49,7 +50,7 @@ const Pokedex = () => {
   return (
     <div className='pokedex'>
       <div className='title'>
-        <img src='src\assets\images\pokedexImg.9b8fddba.png' alt="" />
+        <img src={pokemon} alt="poke" />
       </div>
       <div className='welcome'>
         <h1>welcome!!  {userName}</h1>
