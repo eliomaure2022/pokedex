@@ -49,10 +49,51 @@ html {
   width: 100vw;
   height: 100vh;
   display: flex;
+  gap: 20px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-image: url('../src/assets/images/R.jpg');
+  background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat;
+}
+
+button {
+  background-color: #eb0202; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  padding: 6px 12px; /* Espaciado interno */
+  text-align: center; /* Alineación del texto */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Para que se comporten como elementos en línea */
+  font-size: 16px; /* Tamaño de la fuente */
+  margin: 4px 2px; /* Espaciado entre botones */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  border-radius: 4px; /* Bordes redondeados */
+  transition: background-color 0.3s; /* Efecto al pasar el mouse */
+}
+
+button:hover {
+  background-color: #f64017; /* Color al pasar el mouse */
+}
+
+input[type='text'],
+select {
+  width: 300px; /* Ancho completo */
+  padding: 6px; /* Espaciado interno */
+  margin: 8px 0; /* Espaciado externo */
+  border: 1px solid #ccc; /* Borde */
+  border-radius: 4px; /* Bordes redondeados */
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+  font-size: 16px; /* Tamaño de la fuente */
+  transition: border-color 0.3s; /* Efecto al enfocarse */
+}
+
+input[type='text']:focus,
+select:focus {
+  border-color: #eb0202; /* Color del borde al enfocarse */
+  outline: none; /* Quita el contorno predeterminado */
 }
 
 .title-input {
@@ -62,12 +103,24 @@ html {
 }
 
 .input-name img {
-  width: 100%;
+  width: 100vh;
 }
 
 .input-name h1 {
   font-size: 50px;
   padding: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+.input-container button {
+  padding: 0;
+  margin: 9px;
 }
 
 .card {
@@ -134,7 +187,7 @@ html {
 .modal {
   width: 100vw;
   height: 100vh;
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   background: rgba(94, 85, 85, 0.5);
@@ -145,24 +198,23 @@ html {
 }
 
 .animate-bg {
-  width: 700px;
-  height: 95vh;
-  min-height: 100px;
-  position: relative;
+  width: 50%;
+  height: 80vh;
+  min-height: 10px;
+  position: absolute;
   border-radius: 15px;
   background-color: #a3dae9;
-  box-shadow: rgba(193, 193, 238, 0.2) 0px 0px 35px 6px;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .modal-container img {
   width: 50%;
   z-index: 3;
   position: relative;
-  top: -60px;
+  top: -90px;
   transition: transform 0.5s ease, filter 0.5s ease;
 }
 
@@ -210,7 +262,7 @@ html {
 .img-type {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 30px;
+  margin-top: -60px;
 }
 
 .pokedex button {
@@ -233,7 +285,7 @@ html {
   padding: 7px;
 
   margin: none;
-  height: 200px;
+  height: 150px;
   width: 200px;
   border: 1px solid #ddd;
   background: #f1f1f1;

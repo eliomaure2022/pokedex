@@ -50,20 +50,22 @@ const Pokedex = () => {
       <div className="welcome">
         <h1>welcome!! {userName}</h1>
       </div>
-      <input
-        type="text"
-        placeholder="search pokemon"
-        value={pokemonName}
-        onChange={(e) => setPokemonName(e.target.value)}
-      />
-      <button onClick={searchPokemon}>search</button>
-      <select name="" id="" onChange={filterType}>
-        {locations.map((location) => (
-          <option value={location.url} key={location.name}>
-            {location.name}
-          </option>
-        ))}
-      </select>
+      <div className="input-container">
+        <input
+          type="text"
+          placeholder="search pokemon"
+          value={pokemonName}
+          onChange={(e) => setPokemonName(e.target.value)}
+        />
+        <button onClick={searchPokemon}>search</button>
+        <select name="" id="" onChange={filterType}>
+          {locations.map((location) => (
+            <option value={location.url} key={location.name}>
+              {location.name}
+            </option>
+          ))}
+        </select>
+      </div>
       <div>
         <ul className="card-container">
           {pokemonPaginated.map((pokemon) => (
