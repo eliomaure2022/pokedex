@@ -8,6 +8,7 @@ import pokemon from '../assets/images/pokemon.png'
 const Pokedex = () => {
   const userName = useSelector((state) => state.name)
   const [pokemons, setPokemons] = useState([])
+  const [pokemonName, setPokemonName] = useState('')
   const [page, setPage] = useState(1)
   const pokemonsPerPage = 16
   const lastIndex = page * pokemonsPerPage
@@ -15,7 +16,6 @@ const Pokedex = () => {
   const pokemonPaginated = pokemons.slice(firsIndex, lastIndex)
   const totalPages = Math.ceil(pokemons.length / pokemonsPerPage)
   const navigate = useNavigate()
-  const [pokemonName, setPokemonName] = useState('')
   const [locations, setLocations] = useState([])
 
   const numbers = []
